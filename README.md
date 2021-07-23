@@ -6,8 +6,10 @@
     Para armazenagem dos dados utilizei o banco de dados postgres. 
  Configuração do db em **ormconfig.json**.
 
-
-
+- [rotas](#rotas)
+- [config](#config)
+    - [package](#package)
+    - [tsconfig](#tsconfig)
 
 
 
@@ -350,7 +352,7 @@ Exemplo:
 
 <br>
 
-# token 
+# Token 
 
 * informação
 
@@ -359,6 +361,55 @@ Exemplo:
     * É um token **Bearer**
 
     * É ele é criado na rota [/login](#login)
+
+# Config
+
+## package
+
+```json
+"dependencies": {
+    "bcryptjs": "^2.4.3",
+    "class-transformer": "^0.4.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.0.1",
+    "pg": "^8.6.0",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.0.2",
+    "typeorm": "^0.2.34",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.4",
+    "@types/uuid": "^8.3.1",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+```
+
+## tsconfig
+```json
+{
+  "compilerOptions": {
+    "target": "es5",                               
+    "module": "commonjs",                          
+    "strict": false,                                
+    "esModuleInterop": true,                       
+    "skipLibCheck": true,                          
+    "forceConsistentCasingInFileNames": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "typeRoots": ["./src/@types"],
+    "lib": [ "es2015" ]
+      
+  }
+}
+```
 
 
 
