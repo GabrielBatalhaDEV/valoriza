@@ -42,7 +42,7 @@ Configuração da porta em **src/server.ts**.
 
 
 - Rotas
-    - [/users]
+    - [/users](#/users)
     - /tags
     - /compliments
     - /login 
