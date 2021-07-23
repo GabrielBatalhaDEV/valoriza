@@ -25,7 +25,8 @@
 
     * Precisa ser um usuário autenticado.
 
-## Requests/Routes
+
+## Routes
 
 #### Default port **localhost:3000**
 
@@ -40,12 +41,40 @@ Configuração da porta em **src/server.ts**.
 ```
 
 
+- Rotas
+    - [/users]
+    - /tags
+    - /compliments
+    - /login 
 
-## **Cadastro de usuário**
+exemplo: **127.0.0.1:3000/users**
 
-### **Método**
+## **Requests**
 
-**Method POST**
+## **Cadastro de usuário** 
+# _/users_
+
+### **Método GET**
+
+**Retorna** um Array de objetos JSON
+
+Exemplo:
+```json
+[
+  {
+    "id": "ee15e8cb-aebe-4855-ad3d-d0c643f31cfb",
+    "name": "username",
+    "email": "user@gmail.com",
+    "admin": false,
+    "created_at": "2021-07-23T10:41:38.703Z",
+    "updated_at": "2021-07-23T10:41:38.703Z"
+  }...
+]
+```
+**obs:** O campo password é ocultado pela API para manter a segurança do usuário
+
+
+### **Método POST**
 
 **body JSON**
 
@@ -66,6 +95,23 @@ Configuração da porta em **src/server.ts**.
 	"password":"gabriel" 
 }
 ```
+
+**Retorna** um objeto JSON
+Exemplo:
+```json
+{
+  "user": {
+    "id": "711eb4ab-3e87-4c20-8c03-bdc2dbcb7cb8",
+    "name": "Gabriel",
+    "email": "123@gmail.com",
+    "password": "$2a$08$NVxa1Woy5bVxiepZPsaxauZQ6sftYkxH8GWu5KsCpUSFmkR9tjVjm",
+    "admin": true,
+    "created_at": "2021-07-23T13:51:02.057Z",
+    "Updated_at": "2021-07-23T13:51:02.057Z"
+  }
+}
+```
+
 ### **Regras**
 
 * **Cadastro de usuário**
