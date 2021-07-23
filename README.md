@@ -110,27 +110,25 @@ Exemplo:
 
 ### **Regras**
 
-* **Cadastro de usuário**
+* Não é permitido múltiplos cadastro com o mesmo email.
 
-    * Não é permitido múltiplos cadastro com o mesmo email.
-
-    ```json
+```json
     {
         "error": "User already exists"
     }
-    ```
+ ```
 
-    * Não é permitido cadastro sem email.
+* Não é permitido cadastro sem email.
 
-    ```json
+```json
     {
         "error": "Email Incorrect"
     }   
-    ```
+```
 <br>
 
 ## _/tags_
-
+### **Cadastro de tags** 
 <br>
 
 ### **Método GET**
@@ -154,7 +152,7 @@ Exemplo:
 ### **Método POST**
 <br>
 
-É necessário um token de administrador para criação de uma tag, mais informação sobre o token [/login](#tags)
+É necessário um token de administrador para cadastrar uma tag, mais informação sobre o token [/login](#tags)
 
 **body JSON**
 
