@@ -10,7 +10,7 @@ class ListUserSenderComplimentsService{
             where:{
                 user_sender: user_id
             },
-            relations:["userSender", "userReceiver"]
+            relations:["userSender"]
             
         })
 
