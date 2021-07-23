@@ -43,11 +43,11 @@ Configuração da porta em **src/server.ts**.
 exemplo: **127.0.0.1:3000/users**
 
 # **Requests**
-
-## **Cadastro de usuário** 
 <br>
 
 ## _/users_
+### **Cadastro de usuário** 
+<br>
 
 ### **Método GET**
 
