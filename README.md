@@ -152,7 +152,7 @@ Exemplo:
 ### **Método POST**
 <br>
 
-É necessário um token de administrador para cadastrar uma tag, mais informação sobre o token [/login](#tags)
+É necessário um token de administrador para cadastrar uma tag, mais informação sobre o token \[token\]\(#token\)
 
 **body JSON**
 
@@ -207,7 +207,7 @@ Exemplo:
 
 ### **Método GET**
 
-É necessário um token para elogiar, mais informação sobre o token [/login](#tags)
+É necessário um token para elogiar, mais informação sobre o token \[token\]\(#token\)
 
 ### _/send_
 
@@ -258,7 +258,7 @@ Exemplo:
 ### **Método POST**
 <br>
 
-É necessário um para cadastrar um elogio, mais informação sobre o token [/login](#tags)
+É necessário um para cadastrar um elogio, mais informação sobre o token [token](#token)
 
 **body JSON**
 
@@ -316,78 +316,49 @@ Exemplo:
 <br>
 
 ## _/login_
-### **Cadastro de tags** 
+### **Efetuar login** 
 <br>
-
-### **Método GET**
-
-**Retorna** um Array de objetos JSON
-
-Exemplo:
-```json
-[
-  {
-    "id": "29aa76d4-928d-40e0-a88a-3f96d04f00e4",
-    "name": "Luta",
-    "created_at": "2021-07-23T10:46:34.575Z",
-    "updated_at": "2021-07-23T10:46:34.575Z",
-    "nameCustom": "#Luta"
-  }
-]
-```
-
 
 ### **Método POST**
 <br>
-
-É necessário um token de administrador para cadastrar uma tag, mais informação sobre o token [/login](#tags)
 
 **body JSON**
 
 ```json
 {
-	"name":"Liderança"
+	"email":"viego@gmail.com",
+	"password":"viego"
 }
 ```
 
-**Retorna** um objeto JSON
+**Retorna** uma string
 
 Exemplo:
 ```json
-{
-  "id": "baf51121-4394-4b85-ba4e-81ead0cb6101",
-  "name": "Liderança",
-  "created_at": "2021-07-23T15:06:42.094Z",
-  "updated_at": "2021-07-23T15:06:42.094Z"
-}
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InZpZWdvQGdtYWlsLmNvbSIsImlhdCI6MTYyNzA1NTAzNCwiZXhwIjoxNjI3MTQxNDM0LCJzdWIiOiJlZTE1ZThjYi1hZWJlLTQ4NTUtYWQzZC1kMGM2NDNmMzFjZmIifQ.Lwl_eqosrSyaCEz-ZxCSxJGhp7RTIc5_bTKDUhHrfA8"
 ```
 
 ### **Regras**
 
-* Não é permitido múltiplas tags com o mesmo nome.
+* Caso email/senha incorretas.
 
 ```json
     {
-        "error": "Tag already exists"
+        "error": "Email/Password Incorrect"
     }
 ```
 
-* Não é permitido cadastro de uma tag sem nome.
-
-```json
-    {
-        "error": "Incorrect name"
-    }
-```
-
-* Não é permitido cadastro por usuários que não sejam administradores.
-
-```json
-    {
-        "error": "Unauthorized"
-    }
-```
 <br>
+
+# token 
+
+* informação
+
+    * Token tem 1 dia de vida util 
+
+    * É um token **Bearer**
+
+    * É ele é criado na rota [/login](#login)
 
 
 
