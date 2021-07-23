@@ -131,6 +131,7 @@ Exemplo:
         "error": "Email Incorrect"
     }   
     ```
+<br>
 
 ## _/tags_
 
