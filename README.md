@@ -176,31 +176,29 @@ Exemplo:
 
 ### **Regras**
 
-* **Cadastro de TAG**
+* Não é permitido múltiplas tags com o mesmo nome.
 
-    * Não é permitido múltiplas tags com o mesmo nome.
-
-    ```json
+```json
     {
         "error": "Tag already exists"
     }
-    ```
+```
 
-    * Não é permitido cadastro de uma tag sem nome.
+* Não é permitido cadastro de uma tag sem nome.
 
-    ```json
+```json
     {
         "error": "Incorrect name"
     }
-    ```
+```
 
-    * Não é permitido cadastro por usuários que não sejam administradores.
+* Não é permitido cadastro por usuários que não sejam administradores.
 
-    ```json
+```json
     {
         "error": "Unauthorized"
     }
-    ```
+```
 <br>
 
 
