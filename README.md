@@ -42,17 +42,17 @@ Configuração da porta em **src/server.ts**.
 
 
 - Rotas
-    - [/users](#/users)
-    - /tags
-    - /compliments
-    - /login 
+    - [/users](#users)
+    - [/tags](#tags)
+    - [/compliments](#compliments)
+    - [/login](#login) 
 
 exemplo: **127.0.0.1:3000/users**
 
 ## **Requests**
 
 ## **Cadastro de usuário** 
-# _/users_
+## _/users_
 
 ### **Método GET**
 
@@ -118,7 +118,19 @@ Exemplo:
 
     * Não é permitido múltiplos cadastro com o mesmo email.
 
+    ```json
+    {
+        "error": "User already exists"
+    }
+    ```
+
     * Não é permitido cadastro sem email.
+
+    ```json
+    {
+        "error": "Email Incorrect"
+    }   
+    ```
 
 
 
