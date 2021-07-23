@@ -1,0 +1,35 @@
+import express from 'express';
+
+const app = express();
+/**
+ * get => Buscar uma informação
+ * post => Inserir(Criar) uma informação
+ * delete => Deletar uma informação
+ * put => Alterar uma informação
+ * patch => Alterar uma informação específica
+ */
+
+/**
+ *  tipos de parâmetros:
+ * Routes params => Fazem parte da rota : http://exampleroute:exampleport/produtos/1(Route Params)
+ * Query params =>  http://exampleroute:exampleport/produtos?name=teclado(Query params)
+ * Body params => {
+ *  "name":"teclado",
+ *  "description":"teclado bom",
+ * }
+ */
+
+app.get('/test', (req, res) =>{
+    /**
+     * Request = Entrando
+     * Response = Saindo
+     */
+     return res.send('Olá NLW')
+})
+
+app.post("/test-post",(req,res)=>{
+    return res.send('Ola Post nlw2021')
+})
+
+const port = 3000
+app.listen(port, ()=>console.log(`Server is Running ${port}`));

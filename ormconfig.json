@@ -1,0 +1,14 @@
+{
+    "type": "postgres",
+    "host":"localhost",
+    "port":5432,
+    "database":"nlw2021valoriza",
+    "username":"postgres",
+    "password":"root",
+    "cli":{
+        "migrationsDir":"src/database/migrations",
+        "entitiesDir":"src/entities"
+    },
+    "migrations":["src/database/migrations/*.ts"],
+    "entities":["src/entities/*.ts"]
+ }
