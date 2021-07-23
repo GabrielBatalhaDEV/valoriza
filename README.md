@@ -9,13 +9,6 @@
 
 
 
-* **Cadastro de TAG**
-
-    * Não é permitido múltiplas tags com o mesmo nome.
-
-    * Não é permitido cadastro de uma tag sem nome.
-
-    * Não é permitido cadastro por usuários que não sejam administradores.
 
 * **Cadastro de Elogio**
 
@@ -52,6 +45,8 @@ exemplo: **127.0.0.1:3000/users**
 # **Requests**
 
 ## **Cadastro de usuário** 
+<br>
+
 ## _/users_
 
 ### **Método GET**
@@ -97,6 +92,7 @@ Exemplo:
 ```
 
 **Retorna** um objeto JSON
+
 Exemplo:
 ```json
 {
@@ -134,6 +130,81 @@ Exemplo:
 <br>
 
 ## _/tags_
+
+<br>
+
+### **Método GET**
+
+**Retorna** um Array de objetos JSON
+
+Exemplo:
+```json
+[
+  {
+    "id": "29aa76d4-928d-40e0-a88a-3f96d04f00e4",
+    "name": "Luta",
+    "created_at": "2021-07-23T10:46:34.575Z",
+    "updated_at": "2021-07-23T10:46:34.575Z",
+    "nameCustom": "#Luta"
+  }
+]
+```
+
+
+### **Método POST**
+<br>
+
+É necessário um token de administrador para criação de uma tag, mais informação sobre o token [/login](#tags)
+
+**body JSON**
+
+```json
+{
+	"name":"Liderança"
+}
+```
+
+**Retorna** um objeto JSON
+
+Exemplo:
+```json
+{
+  "id": "baf51121-4394-4b85-ba4e-81ead0cb6101",
+  "name": "Liderança",
+  "created_at": "2021-07-23T15:06:42.094Z",
+  "updated_at": "2021-07-23T15:06:42.094Z"
+}
+```
+
+### **Regras**
+
+* **Cadastro de TAG**
+
+    * Não é permitido múltiplas tags com o mesmo nome.
+
+    ```json
+    {
+        "error": "Tag already exists"
+    }
+    ```
+
+    * Não é permitido cadastro de uma tag sem nome.
+
+    ```json
+    {
+        "error": "Incorrect name"
+    }
+    ```
+
+    * Não é permitido cadastro por usuários que não sejam administradores.
+
+    ```json
+    {
+        "error": "Unauthorized"
+    }
+    ```
+<br>
+
 
 
 
