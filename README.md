@@ -59,7 +59,7 @@ exemplo: **127.0.0.1:3000/users**
 **Retorna** um Array de objetos JSON
 
 Exemplo:
-```json
+``` json
 [
   {
     "id": "ee15e8cb-aebe-4855-ad3d-d0c643f31cfb",
