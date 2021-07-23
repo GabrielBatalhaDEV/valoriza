@@ -7,13 +7,7 @@
  Configuração do db em **ormconfig.json**.
 
 
-## Regras
 
-* **Cadastro de usuário**
-
-    * Não é permitido múltiplos cadastro com o mesmo email.
-
-    * Não é permitido cadastro sem email.
 
 * **Cadastro de TAG**
 
@@ -25,7 +19,7 @@
 
 * **Cadastro de Elogio**
 
-- [x] Não é permitido usuário cadastrar elogio para si.
+    * Não é permitido usuário cadastrar elogio para si.
 
     * Não é permitido cadastrar elogio por usuários inválidos.
 
@@ -33,14 +27,52 @@
 
 ## Requests/Routes
 
-#### **Default port** 3000
+#### Default port **localhost:3000**
 
 Configuração da porta em **src/server.ts**.
 
+```js
+    const port = 3000 
 
+    app.listen(port, () => console.log({
+        port
+    }))
+```
+
+
+
+## **Cadastro de usuário**
+
+### **Método**
+
+**Method POST**
+
+**body JSON**
+
+```json
+{
+	"name":"Gabriel",
+	"email":"gabriel@gmail.com",
+	"password":"gabriel",
+	"admin":true 
+}
+```
+#### **obs**: campo **admin** é opcional, caso não o coloque, seu valor default é false.
+
+```json
+{
+	"name":"Gabriel",
+	"email":"gabriel@gmail.com",
+	"password":"gabriel" 
+}
+```
+### **Regras**
 
 * **Cadastro de usuário**
 
+    * Não é permitido múltiplos cadastro com o mesmo email.
+
+    * Não é permitido cadastro sem email.
 
 
 
