@@ -1,6 +1,6 @@
-# New Level Week Valoriza
+<h1 align='center'><strong>New Level Week Valoriza</h1>
 
-## Sobre
+# Sobre
     Uma web Api REST feita em node, utilizando typeorm, typescript, separada por camadas.
 
     Para armazenagem dos dados utilizei o banco de dados postgres. 
@@ -26,13 +26,13 @@
     * Precisa ser um usuário autenticado.
 
 
-## Routes
+# Routes
 
 #### Default port **localhost:3000**
 
 Configuração da porta em **src/server.ts**.
 
-```js
+```ts 
     const port = 3000 
 
     app.listen(port, () => console.log({
@@ -68,7 +68,7 @@ Exemplo:
     "admin": false,
     "created_at": "2021-07-23T10:41:38.703Z",
     "updated_at": "2021-07-23T10:41:38.703Z"
-  }...
+  }
 ]
 ```
 **obs:** O campo password é ocultado pela API para manter a segurança do usuário
