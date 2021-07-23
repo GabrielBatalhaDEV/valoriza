@@ -9,27 +9,27 @@
 
 ## Regras
 
-### **Cadastro de usuário**
+* **Cadastro de usuário**
 
-    [x] Não é permitido múltiplos cadastro com o mesmo email.
+    * Não é permitido múltiplos cadastro com o mesmo email.
 
-    [x] Não é permitido cadastro sem email.
+    * Não é permitido cadastro sem email.
 
-### **Cadastro de TAG**
+* **Cadastro de TAG**
 
-    [x] Não é permitido múltiplas tags com o mesmo nome.
+    * Não é permitido múltiplas tags com o mesmo nome.
 
-    [x] Não é permitido cadastro de uma tag sem nome.
+    * Não é permitido cadastro de uma tag sem nome.
 
-    [x] Não é permitido cadastro por usuários que não sejam administradores.
+    * Não é permitido cadastro por usuários que não sejam administradores.
 
-### **Cadastro de Elogio**
+* **Cadastro de Elogio**
 
-    [x] Não é permitido usuário cadastrar elogio para si.
+    * Não é permitido usuário cadastrar elogio para si.
 
-    [x] Não é permitido cadastrar elogio por usuários inválidos.
+    * Não é permitido cadastrar elogio por usuários inválidos.
 
-    [x] Precisa ser um usuário autenticado.
+    * Precisa ser um usuário autenticado.
 
 ## Requests
 
